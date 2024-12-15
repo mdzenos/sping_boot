@@ -1,0 +1,40 @@
+00:28:58 [INFO ] [.]: HV000001: Hibernate Validator 8.0.1.Final  | org.hibernate.validator.internal.util.Version 
+00:28:59 [INFO ] [.]: Starting ApplicationTests using Java 17.0.13 with PID 11956 (started by Zenos in D:\Code\java\base)  | com.vnpost.main.ApplicationTests 
+00:28:59 [DEBUG] [.]: Running with Spring Boot v3.4.0, Spring v6.2.0  | com.vnpost.main.ApplicationTests 
+00:28:59 [INFO ] [.]: The following 1 profile is active: "dev"  | com.vnpost.main.ApplicationTests 
+00:28:59 [DEBUG] [.]: Refreshing org.springframework.web.context.support.GenericWebApplicationContext@301d8120  | org.springframework.web.context.support.GenericWebApplicationContext 
+00:29:00 [INFO ] [.]: Bootstrapping Spring Data JPA repositories in DEFAULT mode.  | org.springframework.data.repository.config.RepositoryConfigurationDelegate 
+00:29:00 [INFO ] [.]: Finished Spring Data repository scanning in 100 ms. Found 1 JPA repository interface.  | org.springframework.data.repository.config.RepositoryConfigurationDelegate 
+00:29:01 [INFO ] [.]: HikariPool-1 - Starting...  | com.zaxxer.hikari.HikariDataSource 
+00:29:02 [INFO ] [.]: HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a3cf824  | com.zaxxer.hikari.pool.HikariPool 
+00:29:02 [INFO ] [.]: HikariPool-1 - Start completed.  | com.zaxxer.hikari.HikariDataSource 
+00:29:02 [INFO ] [.]: Database: jdbc:postgresql://localhost:5430/postgres (PostgreSQL 15.10)  | org.flywaydb.core.FlywayExecutor 
+00:29:02 [INFO ] [.]: Successfully validated 1 migration (execution time 00:00.086s)  | org.flywaydb.core.internal.command.DbValidate 
+00:29:02 [INFO ] [.]: Current version of schema "public": 1  | org.flywaydb.core.internal.command.DbMigrate 
+00:29:02 [ERROR] [.]: Schema "public" has version 1, but no migration could be resolved in the configured locations !  | org.flywaydb.core.internal.command.DbMigrate 
+00:29:02 [INFO ] [.]: Schema "public" is up to date. No migration necessary.  | org.flywaydb.core.internal.command.DbMigrate 
+00:29:02 [INFO ] [.]: HHH000204: Processing PersistenceUnitInfo [name: default]  | org.hibernate.jpa.internal.util.LogHelper 
+00:29:03 [INFO ] [.]: HHH000412: Hibernate ORM core version 6.6.2.Final  | org.hibernate.Version 
+00:29:03 [INFO ] [.]: HHH000026: Second-level cache disabled  | org.hibernate.cache.internal.RegionFactoryInitiator 
+00:29:03 [INFO ] [.]: No LoadTimeWeaver setup: ignoring JPA class transformer  | org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo 
+00:29:03 [INFO ] [.]: HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown  | org.hibernate.orm.connections.pooling 
+00:29:04 [INFO ] [.]: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)  | org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 
+00:29:04 [INFO ] [.]: Initialized JPA EntityManagerFactory for persistence unit 'default'  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean 
+00:29:06 [WARN ] [.]: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning  | org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration 
+00:29:06 [INFO ] [.]: Adding welcome page template: index  | org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping 
+00:29:06 [DEBUG] [.]: 5 mappings in 'requestMappingHandlerMapping'  | org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping 
+00:29:06 [DEBUG] [.]: Patterns [/webjars/**, /**, /files/**] in 'resourceHandlerMapping'  | org.springframework.web.servlet.handler.SimpleUrlHandlerMapping 
+00:29:06 [DEBUG] [.]: ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice  | org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter 
+00:29:07 [DEBUG] [.]: ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice  | org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver 
+00:29:07 [INFO ] [.]: Started ApplicationTests in 8.954 seconds (process running for 10.822)  | com.vnpost.main.ApplicationTests 
+00:29:08 [DEBUG] [.]: Closing org.springframework.web.context.support.GenericWebApplicationContext@301d8120, started on Mon Dec 16 00:28:59 ICT 2024  | org.springframework.web.context.support.GenericWebApplicationContext 
+00:29:08 [INFO ] [.]: Closing JPA EntityManagerFactory for persistence unit 'default'  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean 
+00:29:08 [INFO ] [.]: HikariPool-1 - Shutdown initiated...  | com.zaxxer.hikari.HikariDataSource 
+00:29:08 [INFO ] [.]: HikariPool-1 - Shutdown completed.  | com.zaxxer.hikari.HikariDataSource 
