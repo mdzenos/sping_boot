@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%green(%d{HH:mm:ss}) %highlight([%-5level]) %yellow([%X{controller}.%X{method}]) - %msg %exception{short} | %magenta(%logger%n)</pattern>
+        </encoder>
+    </appender>
+     
+    <appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>storage/logs/spring.log</file>
+        <encoder>
+            <pattern>%d{HH:mm:ss} [%-5level] [%X{controller}.%X{method}]: %msg %exception{short} | %logger %n</pattern>
+        </encoder>
+         
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>storage/logs/spring-%d{yyyyMMdd}.log</fileNamePattern>
+            <maxFileSize>25MB</maxFileSize>
+            <maxHistory>60</maxHistory>
+            <totalSizeCap>2048MB</totalSizeCap>
+            <!-- cleanHistoryOnStart chỉ kích hoạt trong môi trường dev -->
+            <springProfile name="dev">
+                <cleanHistoryOnStart>true</cleanHistoryOnStart>
+            </springProfile>
+
+            <!-- Không kích hoạt cleanHistoryOnStart trong môi trường prod -->
+            <springProfile name="prod">
+                <cleanHistoryOnStart>false</cleanHistoryOnStart>
+            </springProfile>
+        </rollingPolicy>
+    </appender>
+     
+    <root level="INFO">
+        <appender-ref ref="Console" />
+        <appender-ref ref="RollingFile" />
+    </root>
+
+    <springProfile name="dev">
+        <logger name="org.springframework.web" level="DEBUG"/>
+        <logger name="org.springframework" level="INFO"/>
+        <logger name="org.hibernate.SQL" level="DEBUG"/>
+        <logger name="com.vnpost.main" level="DEBUG"/>
+    </springProfile>
+
+    <springProfile name="prod">
+        <logger name="org.springframework.web" level="INFO"/>
+        <logger name="org.springframework" level="INFO"/>
+        <logger name="org.hibernate.SQL" level="WARN"/>
+        <logger name="com.vnpost.main" level="INFO"/>
+    </springProfile>
+</configuration>

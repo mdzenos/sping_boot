@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(-45deg, #a8e063, #faffb8, #66ff66, #ccffcc);
+        background-size: 400% 400%;
+        animation: gradientBG 12s ease infinite;
+        font-family: "Roboto", sans-serif;
+      }
+
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .welcome-container {
+        text-align: center;
+        color: #4a4a4a;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 20px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+      }
+
+      .welcome-container h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: #66ff66;
+        animation: fadeInDown 1.5s;
+      }
+
+      .welcome-container p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #6b8e23;
+        animation: fadeInUp 1.5s;
+      }
+
+      .welcome-container a {
+        display: inline-block;
+        font-size: 1.1rem;
+        padding: 12px 30px;
+        color: white;
+        text-decoration: none;
+        background: linear-gradient(to right, #a8e063, #66ff66);
+        border-radius: 25px;
+        box-shadow: 0 5px 15px rgba(102, 255, 102, 0.4);
+        transition: transform 0.3s, box-shadow 0.3s;
+        animation: bounce 2s infinite;
+      }
+
+      .welcome-container a:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 25px rgba(102, 255, 102, 0.6);
+      }
+
+      @keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="welcome-container">
+      <h1>Welcome!</h1>
+      <p>Chào mừng bạn đến với ứng dụng Spring Boot!</p>
+    </div>
+  </body>
+</html>
