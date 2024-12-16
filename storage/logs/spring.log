@@ -3,3 +3,66 @@
 11:43:02 [INFO ] [.]: Closing JPA EntityManagerFactory for persistence unit 'default'  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean 
 11:43:02 [INFO ] [.]: HikariPool-1 - Shutdown initiated...  | com.zaxxer.hikari.HikariDataSource 
 11:43:02 [INFO ] [.]: HikariPool-1 - Shutdown completed.  | com.zaxxer.hikari.HikariDataSource 
+18:00:42 [INFO ] [.]: HV000001: Hibernate Validator 8.0.1.Final  | org.hibernate.validator.internal.util.Version 
+18:00:42 [INFO ] [.]: Starting Application using Java 17.0.13 with PID 17960 (D:\Code\java\base\target\classes started by Zenos in D:\Code\java\base)  | com.vnpost.Application 
+18:00:42 [INFO ] [.]: The following 1 profile is active: "dev"  | com.vnpost.Application 
+18:00:43 [INFO ] [.]: Bootstrapping Spring Data JPA repositories in DEFAULT mode.  | org.springframework.data.repository.config.RepositoryConfigurationDelegate 
+18:00:44 [INFO ] [.]: Finished Spring Data repository scanning in 132 ms. Found 1 JPA repository interface.  | org.springframework.data.repository.config.RepositoryConfigurationDelegate 
+18:00:47 [INFO ] [.]: Tomcat initialized with port 8080 (http)  | org.springframework.boot.web.embedded.tomcat.TomcatWebServer 
+18:00:47 [INFO ] [.]: Initializing ProtocolHandler ["http-nio-8080"]  | org.apache.coyote.http11.Http11NioProtocol 
+18:00:47 [INFO ] [.]: Starting service [Tomcat]  | org.apache.catalina.core.StandardService 
+18:00:47 [INFO ] [.]: Starting Servlet engine: [Apache Tomcat/10.1.33]  | org.apache.catalina.core.StandardEngine 
+18:00:47 [INFO ] [.]: Initializing Spring embedded WebApplicationContext  | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 
+18:00:47 [INFO ] [.]: Root WebApplicationContext: initialization completed in 5106 ms  | org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 
+18:00:49 [INFO ] [.]: HikariPool-1 - Starting...  | com.zaxxer.hikari.HikariDataSource 
+18:00:50 [INFO ] [.]: HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@173511ff  | com.zaxxer.hikari.pool.HikariPool 
+18:00:50 [INFO ] [.]: HikariPool-1 - Start completed.  | com.zaxxer.hikari.HikariDataSource 
+18:00:50 [INFO ] [.]: Database: jdbc:postgresql://localhost:5430/postgres (PostgreSQL 15.10)  | org.flywaydb.core.FlywayExecutor 
+18:00:50 [INFO ] [.]: Successfully validated 1 migration (execution time 00:00.138s)  | org.flywaydb.core.internal.command.DbValidate 
+18:00:50 [INFO ] [.]: Current version of schema "public": 1  | org.flywaydb.core.internal.command.DbMigrate 
+18:00:50 [ERROR] [.]: Schema "public" has version 1, but no migration could be resolved in the configured locations !  | org.flywaydb.core.internal.command.DbMigrate 
+18:00:50 [INFO ] [.]: Schema "public" is up to date. No migration necessary.  | org.flywaydb.core.internal.command.DbMigrate 
+18:00:51 [INFO ] [.]: HHH000204: Processing PersistenceUnitInfo [name: default]  | org.hibernate.jpa.internal.util.LogHelper 
+18:00:51 [INFO ] [.]: HHH000412: Hibernate ORM core version 6.6.2.Final  | org.hibernate.Version 
+18:00:51 [INFO ] [.]: HHH000026: Second-level cache disabled  | org.hibernate.cache.internal.RegionFactoryInitiator 
+18:00:52 [INFO ] [.]: No LoadTimeWeaver setup: ignoring JPA class transformer  | org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo 
+18:00:52 [INFO ] [.]: HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown  | org.hibernate.orm.connections.pooling 
+18:00:54 [INFO ] [.]: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)  | org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator 
+18:00:54 [INFO ] [.]: Initialized JPA EntityManagerFactory for persistence unit 'default'  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean 
+18:00:55 [WARN ] [.]: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning  | org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration 
+18:00:55 [INFO ] [.]: Adding welcome page template: index  | org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping 
+18:00:55 [DEBUG] [.]: 5 mappings in 'requestMappingHandlerMapping'  | org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping 
+18:00:56 [DEBUG] [.]: Patterns [/webjars/**, /**, /files/**] in 'resourceHandlerMapping'  | org.springframework.web.servlet.handler.SimpleUrlHandlerMapping 
+18:00:56 [DEBUG] [.]: ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice  | org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter 
+18:00:57 [DEBUG] [.]: ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice  | org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver 
+18:00:57 [INFO ] [.]: Starting ProtocolHandler ["http-nio-8080"]  | org.apache.coyote.http11.Http11NioProtocol 
+18:00:57 [INFO ] [.]: Tomcat started on port 8080 (http) with context path '/'  | org.springframework.boot.web.embedded.tomcat.TomcatWebServer 
+18:00:57 [INFO ] [.]: Started Application in 16.27 seconds (process running for 17.124)  | com.vnpost.Application 
+18:01:01 [INFO ] [.]: Initializing Spring DispatcherServlet 'dispatcherServlet'  | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] 
+18:01:01 [INFO ] [.]: Initializing Servlet 'dispatcherServlet'  | org.springframework.web.servlet.DispatcherServlet 
+18:01:01 [DEBUG] [.]: Detected StandardServletMultipartResolver  | org.springframework.web.servlet.DispatcherServlet 
+18:01:01 [DEBUG] [.]: Detected AcceptHeaderLocaleResolver  | org.springframework.web.servlet.DispatcherServlet 
+18:01:01 [DEBUG] [.]: Detected FixedThemeResolver  | org.springframework.web.servlet.DispatcherServlet 
+18:01:01 [DEBUG] [.]: Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@52e34db  | org.springframework.web.servlet.DispatcherServlet 
+18:01:01 [DEBUG] [.]: Detected org.springframework.web.servlet.support.SessionFlashMapManager@3a5c6009  | org.springframework.web.servlet.DispatcherServlet 
+18:01:01 [DEBUG] [.]: enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data  | org.springframework.web.servlet.DispatcherServlet 
+18:01:01 [INFO ] [.]: Completed initialization in 11 ms  | org.springframework.web.servlet.DispatcherServlet 
+18:01:01 [DEBUG] [.]: GET "/", parameters={}  | org.springframework.web.servlet.DispatcherServlet 
+18:01:01 [DEBUG] [.]: Mapped to com.vnpost.Application#index()  | org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping 
+18:01:01 [DEBUG] [.]: Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]  | org.springframework.web.servlet.view.ContentNegotiatingViewResolver 
+18:01:01 [DEBUG] [.]: Completed 200 OK  | org.springframework.web.servlet.DispatcherServlet 
+18:01:02 [DEBUG] [.]: GET "/favicon.ico", parameters={}  | org.springframework.web.servlet.DispatcherServlet 
+18:01:02 [DEBUG] [.]: Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]  | org.springframework.web.servlet.handler.SimpleUrlHandlerMapping 
+18:01:02 [DEBUG] [.]: Resource not found  | org.springframework.web.servlet.resource.ResourceHttpRequestHandler 
+18:01:02 [DEBUG] [.]: Using @ExceptionHandler com.vnpost.api.v1.exceptions.GlobalException#handle(Exception, WebRequest)  | org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver 
+18:01:02 [DEBUG] [.]: Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]  | org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor 
+18:01:02 [DEBUG] [.]: Writing [ResponseService(success=false, data=[An unexpected error occurred: No static resource favicon.ico.], (truncated)...]  | org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor 
+18:01:02 [DEBUG] [.]: Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]  | org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver 
+18:01:02 [DEBUG] [.]: Completed 500 INTERNAL_SERVER_ERROR  | org.springframework.web.servlet.DispatcherServlet 
