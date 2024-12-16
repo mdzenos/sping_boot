@@ -67,6 +67,12 @@
             <version>4.0.1</version>
             <scope>provided</scope>
         </dependency> -->
+        <!-- Điều tải -->
+        <dependency>
+            <groupId>com.bucket4j</groupId>
+            <artifactId>bucket4j-core</artifactId>
+            <version>8.10.0</version>
+        </dependency>
         <!--ORM-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

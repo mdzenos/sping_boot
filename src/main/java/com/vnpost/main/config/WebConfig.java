@@ -1,11 +1,14 @@
 package com.vnpost.main.config;
 
+import com.vnpost.main.filters.RateLimitFilter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import com.vnpost.main.interceptors.RateLimitInterceptor;
 import com.vnpost.main.middleware.MiddlewareInterceptor;
 
 @Configuration
@@ -13,9 +16,6 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Autowired
     private FileSystem fileStorageProperties;
-
-    @Autowired
-    private RateLimitInterceptor rateLimitInterceptor;
 
     @Autowired
     private MiddlewareInterceptor middlewareInterceptor;
@@ -28,13 +28,20 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        // Thêm RateLimitInterceptor
-        registry.addInterceptor(rateLimitInterceptor)
-                .addPathPatterns("/**");
-
         // Thêm MiddlewareInterceptor với các đường dẫn đã cấu hình
         registry.addInterceptor(middlewareInterceptor)
                 .addPathPatterns(middlewareInterceptor.URL_PATTERNS)
                 .excludePathPatterns(middlewareInterceptor.EXCLUDED_URLS);
+    }
+
+    @Bean
+    public FilterRegistrationBean<RateLimitFilter> rateLimitFilter(
+            @Value("${rate.limit.max:999999999}") int capacity,
+            @Value("${rate.limit.time:60}") int refill) {
+        FilterRegistrationBean<RateLimitFilter> registrationBean = new FilterRegistrationBean<>();
+        registrationBean.setFilter(new RateLimitFilter(capacity, refill));
+        registrationBean.addUrlPatterns("/*");
+        registrationBean.setOrder(1);
+        return registrationBean;
     }
 }
